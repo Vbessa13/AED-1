@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//como foi solicitado para nao utilizar funçoes da biblioteca string.h e observar a diferença entre caracter na tabela ASCII, optei por utilizar a função 'toupper'
+//já que não consegui fazer imprimir somente o nome escrito comparando bit por bit e subtraindo por 32 (diferença de valores entre maiusculo e minusculo na tabela ASCII
+
 void maiusculo(char s1[], char s2[]){
     int i = 0;
     while(s1[i] != '\0'){
