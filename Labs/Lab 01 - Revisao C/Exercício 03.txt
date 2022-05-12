@@ -21,22 +21,14 @@ int main(){
     for(j=0,i=3; j<=3,i>=0; j++,i--){
         invert[j] = binario[i];
     }
-//printf("%d%d%d%d",binario[0],binario[1],binario[2],binario[3]);
-//printf("\n%d%d%d%d",invert[0],invert[1],invert[2],invert[3]);
+
     for(i=0; i<=3; i++){
         if(invert[i] == 1){
             r = r + pow(2,i);
         }
     }
 
-    printf("%d",r);
+    printf("O numero binario %d%d%d%d corresponde ao numero decimal %d",binario[0],binario[1],binario[2],binario[3],r);
 
     return 0;
 }
-
-
-
-
-
-
-
