@@ -1,3 +1,7 @@
+/** criador: Vitor Santini  Bessa
+ *  matricula: 11821BCC010
+ */
+
 #include <stdlib.h>
 #include <stdio.h>
 
