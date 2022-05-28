@@ -18,7 +18,8 @@ int main(){
     int qtde, j = 0, i = 0;
     float soma = 0;
     double sorteio, resultado = 0;
-    int par1[10], par2[10],k,l;
+    //int par1[10], par2[10];
+    int k,l;
 
     printf("Insira a quantidade de individuos: ");
     scanf("%d",&qtde);
@@ -67,8 +68,8 @@ int main(){
         k = rand() % 100;
         //printf("%d\n", k);
         l = rand() % 100;
-        par1[10] = p.pop[k].codigo_genetico;
-        par2[10] = p.pop[l].codigo_genetico;
+        //par1[10] = p.pop[k].codigo_genetico;
+        //par2[10] = p.pop[l].codigo_genetico;
         printf("Par_%d = (%d,%d)\n",i,k,l);
     }
 
