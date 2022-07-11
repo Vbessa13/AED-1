@@ -1,6 +1,7 @@
 /**
-Autor:Vitor Santini Bessa
-Matricula: 11821BCC010 - UFU
+Criado por: Vitor Santini Bessa
+Matr√≠cula: 11821BCC010
+Universidade: UFU
 */
 
 #include <stdio.h>
@@ -13,55 +14,55 @@ struct no{
 };
 
 Lista cria_lista(){
-    //Aloca nÛ cabeÁalho
+    //Aloca n√≥ cabe√ßalho
     Lista cab;
     cab = (Lista)malloc(sizeof(struct no));
     //Coloca lista no estado de vazia
-    if(cab != NULL){ //SÛ se alocaÁ„o N√O falhar
+    if(cab != NULL){ //S√≥ se aloca√ß√£o N√ÉO falhar
         cab->prox = NULL;
         cab->info = 0; //Opcional: guardar quantidade
     }
-    return cab;//Se alocaÁ„o falhar, retorna NULL
+    return cab;//Se aloca√ß√£o falhar, retorna NULL
 }
 
 int lista_vazia(Lista lst){
     if(lst->prox == NULL)
         return 1;//Lista vazia
     else
-        return 0;//Lista N√O vazia
+        return 0;//Lista N√ÉO vazia
 }
 
 int insere_ord (Lista *lst, int elem) {
-    //Aloca um novo nÛ
+    //Aloca um novo n√≥
     Lista N = (Lista) malloc(sizeof(struct no));
     if (N == NULL)
-        return 0;//Falha: nÛ nao alocado
-    N->info = elem;//Insere o conte˙do (valor do elem)
+        return 0;//Falha: n√≥ nao alocado
+    N->info = elem;//Insere o conte√∫do (valor do elem)
     //Percorrimento da lista
-    Lista aux = *lst;//Faz aux apontar para o nÛ cabeÁalho
+    Lista aux = *lst;//Faz aux apontar para o n√≥ cabe√ßalho
     while (aux->prox != NULL && aux->prox->info < elem)
-        aux = aux->prox;//AvanÁa
-    //Insere o novo nÛ na lista
+        aux = aux->prox;//Avan√ßa
+    //Insere o novo n√≥ na lista
     N->prox = aux->prox;
     aux->prox = N;
-    (*lst)->info++;//Opcional: incrementa quantidade de nÛs na lista
+    (*lst)->info++;//Opcional: incrementa quantidade de n√≥s na lista
     return 1;
 }
 
 int remove_ord (Lista *lst, int elem) {
         if (lista_vazia(*lst) == 1)
         return 0;//Falha
-    Lista aux = *lst;//Ponteiro auxiliar para nÛ cabeÁalho
-    //Percorrimento atÈ final de lista, achar elem ou nÛ maior
+    Lista aux = *lst;//Ponteiro auxiliar para n√≥ cabe√ßalho
+    //Percorrimento at√© final de lista, achar elem ou n√≥ maior
     while (aux->prox != NULL && aux->prox->info < elem)
         aux = aux->prox;
     if (aux->prox == NULL || aux->prox->info > elem)
         return 0;//Falha
     //Remove elemento da lista
-    Lista aux2 = aux->prox;//Aponta nÛ  a ser removido
-    aux->prox = aux2->prox;//Retira nÛ da lista
-    free(aux2);//Libera memÛria alocada
-    (*lst)->info--;//Opcional: Decrementa quantidade de nÛs na lista
+    Lista aux2 = aux->prox;//Aponta n√≥  a ser removido
+    aux->prox = aux2->prox;//Retira n√≥ da lista
+    free(aux2);//Libera mem√≥ria alocada
+    (*lst)->info--;//Opcional: Decrementa quantidade de n√≥s na lista
     return 1;
 }
 
@@ -193,15 +194,15 @@ float media(Lista lst){
 }
 
 int insere_elem(Lista *lst, int elem){
-    //Aloca um novo nÛ
+    //Aloca um novo n√≥
     Lista N = (Lista) malloc(sizeof(struct no));
     if (N == NULL)
-        return 0;//Falha: nÛ nao alocado
-    //preenche os campos do novo nÛ
-    N->info = elem;//Insere o conte˙do (valor do elem)
-    N->prox = (*lst)->prox;//Aponta para o 1∫ nÛ atual da lista
-    (*lst)->prox = N;//Faz o nÛ cabeÁalho apontar para o novo nÛ
-    (*lst)->info++;//opcional: Incrementar a quantidade de nÛs da lista
+        return 0;//Falha: n√≥ nao alocado
+    //preenche os campos do novo n√≥
+    N->info = elem;//Insere o conte√∫do (valor do elem)
+    N->prox = (*lst)->prox;//Aponta para o 1¬∫ n√≥ atual da lista
+    (*lst)->prox = N;//Faz o n√≥ cabe√ßalho apontar para o novo n√≥
+    (*lst)->info++;//opcional: Incrementar a quantidade de n√≥s da lista
     return 1;
 }
 

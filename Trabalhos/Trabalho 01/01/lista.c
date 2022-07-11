@@ -1,3 +1,9 @@
+/**
+Criado por: Vitor Santini Bessa
+MatrÃ­cula: 11821BCC010
+Universidade: UFU
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "lista.h"
@@ -29,7 +35,7 @@ int lista_cheia(Lista lst){
     if(lst->Fim == max)
         return 1;//Lista cheia
     else
-        return 0;//Lista NÂO cheia
+        return 0;//Lista NÃ‚O cheia
 }
 
 int insere_ord(Lista lst, int elem){
@@ -47,7 +53,7 @@ int insere_ord(Lista lst, int elem){
             lst->no[i] = lst->no[i-1];
         lst->no[aux] = elem;//Inclui o elemento na lista
     }
-    lst->Fim++;//Avança o Fim
+    lst->Fim++;//AvanÃ§a o Fim
     return 1; //Sucesso
 }
 
@@ -56,7 +62,7 @@ int insere_elem(Lista lst, int elem){
         return 0;
 
     lst->no[lst->Fim] = elem;//Insere Elemento
-    lst->Fim++;//Avança o Fim
+    lst->Fim++;//AvanÃ§a o Fim
     return 1;
 }
 
@@ -65,14 +71,14 @@ int remove_elem(Lista lst, int elem){
         return 0; //Falha
     int i, Aux = 0;
 
-    //Percorrimento até achar o elem ou final de lista
+    //Percorrimento atÃ© achar o elem ou final de lista
     while(Aux < lst->Fim && lst->no[Aux] != elem)
         Aux++;
     if(Aux == lst->Fim){//Final da lista (elem)
         return 0;//Falha
     }
 
-    //Deslocamento à esquerda do sucessor até o final da lista
+    //Deslocamento Ã  esquerda do sucessor atÃ© o final da lista
     for(i = Aux+1; i < lst->Fim; i++)
         lst->no[i-1] = lst->no[i];
 
@@ -110,11 +116,11 @@ int concatena_lista(Lista lst1, Lista lst2, Lista lst3){      ///Concatena 2 lis
     //if(lst1->Fim + lst2->Fim > 20)
       //  return 0;
     lst3->Fim = lst1->Fim + lst2->Fim;
-    while(Aux < lst1->Fim){               // Percorrimento até achar o  final de lst1
+    while(Aux < lst1->Fim){               // Percorrimento atÃ© achar o  final de lst1
         lst3->no[Aux] = lst1->no[Aux];
         Aux++;
     }
-    while(Aux2 < lst2->Fim){               // Percorrimento até achar o  final de lst2
+    while(Aux2 < lst2->Fim){               // Percorrimento atÃ© achar o  final de lst2
         lst3->no[Aux] = lst2->no[Aux2];
         Aux2++;
         Aux++;
@@ -139,11 +145,11 @@ int tamanho_lista(Lista lst){                   //retorna o tamanho da lista
     return y;
 }
 
-int remove_impar(Lista lst){          //Remove todos os elementos ímpares
+int remove_impar(Lista lst){          //Remove todos os elementos Ã­mpares
  if (lst == NULL || lista_vazia(lst) == 1)
         return 0;
         int i, Aux = 0;
-    while (Aux < lst->Fim ){  // Percorrimento até achar o  final de lista
+    while (Aux < lst->Fim ){  // Percorrimento atÃ© achar o  final de lista
         if(lst->no[Aux]%2==1){
                 for(i=Aux+1;i< lst->Fim;i++){
             lst->no[i-1] = lst ->no[i];}

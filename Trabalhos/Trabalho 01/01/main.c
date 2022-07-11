@@ -1,3 +1,9 @@
+/**
+Criado por: Vitor Santini Bessa
+Matrícula: 11821BCC010
+Universidade: UFU
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "lista.h"
