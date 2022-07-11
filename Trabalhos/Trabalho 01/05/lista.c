@@ -1,3 +1,9 @@
+/**
+Criado por: Vitor Santini Bessa
+Matr√≠cula: 11821BCC010
+Universidade: UFU
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "lista.h"
@@ -20,21 +26,21 @@ int lista_vazia (Lista lst) {
 }
 
 int insere_final (Lista *lst, int elem) {
-    //Aloca um novo nÛ e preenche o campo info
+    //Aloca um novo n√≥ e preenche o campo info
     Lista N = (Lista) malloc(sizeof(struct no));
     if (N == NULL)
         return 0;
     N->info = elem;
     //Trata lista vazia
     if (lista_vazia(*lst) == 1) {
-        N->prox = N;//Faz o novo nÛ apontar para ele mesmo
-        *lst = N;//Faz a lista apontar para o novo nÛ (ultimo nÛ)
+        N->prox = N;//Faz o novo n√≥ apontar para ele mesmo
+        *lst = N;//Faz a lista apontar para o novo n√≥ (ultimo n√≥)
     }
     //Trata lista com elementos (1 ou +)
     else {
-        N->prox = (*lst)->prox;//Faz o novo nÛ apontar o 1∫ nÛ
-        (*lst)->prox = N;//Faz o ultimo nÛ apontar para o novo nÛ
-        *lst = N;//Faz a lista apontar para o novo nÛ (ultimo nÛ)
+        N->prox = (*lst)->prox;//Faz o novo n√≥ apontar o 1¬∫ n√≥
+        (*lst)->prox = N;//Faz o ultimo n√≥ apontar para o novo n√≥
+        *lst = N;//Faz a lista apontar para o novo n√≥ (ultimo n√≥)
     }
     return 1;
 }
@@ -95,7 +101,7 @@ int maior(Lista lst){
 }
 
 int insere_inicio(Lista *lst, int elem){
-    //Aloca um novo nÛ e preenche o campo info
+    //Aloca um novo n√≥ e preenche o campo info
     Lista N = (Lista) malloc(sizeof(struct no));
     if (N == NULL)
         return 0;
