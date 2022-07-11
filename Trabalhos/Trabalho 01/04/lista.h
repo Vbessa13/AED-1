@@ -1,8 +1,8 @@
 /**
-Autor:Vitor Santini Bessa
-Matricula: 11821BCC010 - UFU
+Criado por: Vitor Santini Bessa
+Matrícula: 11821BCC010
+Universidade: UFU
 */
-
 #ifndef LISTA_H_INCLUDED
 #define LISTA_H_INCLUDED
 
